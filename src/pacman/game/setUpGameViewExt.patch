@@ -1,0 +1,132 @@
+### Eclipse Workspace Patch 1.0
+#P pacman
+Index: src/pacman/game/GameView.java
+===================================================================
+--- src/pacman/game/GameView.java	(revision 39)
++++ src/pacman/game/GameView.java	(working copy)
+@@ -23,19 +23,19 @@
+  * could be useful for debugging.
+  */
+ @SuppressWarnings("serial")
+-public final class GameView extends JComponent 
++public class GameView extends JComponent 
+ {	
+-    private final Game game;
+-    private Images images;    
+-    private MOVE lastPacManMove;
+-    private int time;
++	protected final Game game;
++	protected Images images;    
++	protected MOVE lastPacManMove;
++	protected int time;
+     private GameFrame frame;    
+-    private Graphics bufferGraphics; 
++    protected Graphics bufferGraphics; 
+     private BufferedImage offscreen; 
+ 
+     //for debugging/illustration purposes only: draw colors in the maze to check whether controller is working
+     //correctly or not; can draw squares and lines (see NearestPillPacManVS for demonstration).
+-    private static boolean isVisible=true;
++    protected static boolean isVisible=true;
+     private static boolean saveImage=false;
+     private static String imageFileName="";
+     public static Vector<DebugPointer> debugPointers=new Vector<DebugPointer>();
+@@ -105,7 +105,7 @@
+     /**
+      * Draw the debug info and the clear it - it is shown for a single time step only.
+      */
+-    private void drawDebugInfo()
++    protected void drawDebugInfo()
+     {
+     	for(int i=0;i<debugPointers.size();i++)
+     	{
+@@ -191,7 +191,7 @@
+     /**
+      * Draw maze.
+      */
+-    private void drawMaze()
++    protected void drawMaze()
+     {
+     	bufferGraphics.setColor(Color.BLACK);
+     	bufferGraphics.fillRect(0,0,GV_WIDTH*MAG,GV_HEIGHT*MAG+20);
+@@ -202,7 +202,7 @@
+     /**
+      * Draw pills.
+      */
+-    private void drawPills()
++    protected void drawPills()
+     {
+         int[] pillIndices=game.getPillIndices();
+         
+@@ -216,7 +216,7 @@
+     /**
+      * Draw power pills.
+      */
+-    private void drawPowerPills()
++    protected void drawPowerPills()
+     {
+         int[] powerPillIndices=game.getPowerPillIndices();
+           
+@@ -230,7 +230,7 @@
+     /**
+      * Draw pac man.
+      */
+-    private void drawPacMan()
++    protected void drawPacMan()
+     {
+     	int pacLoc=game.getPacmanCurrentNodeIndex();
+     	
+@@ -245,7 +245,7 @@
+     /**
+      * Draw ghosts.
+      */
+-    private void drawGhosts() 
++    protected void drawGhosts() 
+     {
+     	for(GHOST ghostType : GHOST.values())
+     	{
+@@ -276,7 +276,7 @@
+     /**
+      * Draw lives.
+      */
+-    private void drawLives()
++    protected void drawLives()
+     {
+     	for(int i=0;i<game.getPacmanNumberOfLivesRemaining()-1;i++) //-1 as lives remaining includes the current life
+     		bufferGraphics.drawImage(images.getPacManForExtraLives(),210-(30*i)/2,260,null);
+@@ -285,7 +285,7 @@
+     /**
+      * Draw game info.
+      */
+-    private void drawGameInfo()
++    protected void drawGameInfo()
+     {
+     	bufferGraphics.setColor(Color.WHITE);
+     	bufferGraphics.drawString("S: ",4,271);
+@@ -299,7 +299,7 @@
+     /**
+      * Draw game over.
+      */
+-    private void drawGameOver()
++    protected void drawGameOver()
+     {
+     	bufferGraphics.setColor(Color.WHITE);
+     	bufferGraphics.drawString("Game Over",80,150);
+@@ -361,7 +361,7 @@
+         }
+     }
+     
+-    private static class DebugPointer
++    protected static class DebugPointer
+     {
+ 	    public int x,y;
+ 	    public Color color;
+@@ -374,7 +374,7 @@
+     	}
+     }
+     
+-    private static class DebugLine
++    protected static class DebugLine
+     {
+ 	    public int x1,y1,x2,y2;
+ 	    public Color color;
