@@ -1,8 +1,8 @@
 package pacman.optimizer.ga;
 
 import pacman.Executor_Experiment;
+import pacman.controllers.examples.NearestPillPacMan;
 import pacman.entries.ghosts.fair.FairGhosts;
-import pacman.entries.wcci2012.pacman.r05_ghostbuster.MyPacMan;
 
 /**
  * The FairGhostsWorkerThread is Runnable class that will be executed parallel in several threads to
@@ -26,7 +26,7 @@ public class FairGhostsWorkerThread implements Runnable {
 
 		Executor_Experiment experiment = new Executor_Experiment();
 		try {
-			double trialScore = experiment.runGameTimedSpeedOptimisedV2(new MyPacMan(), new FairGhosts());
+			double trialScore = experiment.runGameTimedSpeedOptimisedV2(new NearestPillPacMan(), new FairGhosts());
 
 			synchronized (this) {
 				FairGhostsFitnessFunction.scoreList.add(trialScore);

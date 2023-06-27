@@ -15,9 +15,9 @@ import java.util.Random;
 
 import pacman.controllers.Controller;
 import pacman.controllers.HumanController;
+import pacman.controllers.KeyBoardInput;
 import pacman.controllers.examples.StarterPacMan;
 import pacman.entries.ghosts.fair.FairGhosts;
-import pacman.entries.wcci2012.pacman.r02_maastricht.MyPacMan;
 import pacman.game.Constants.GHOST;
 import pacman.game.Constants.MOVE;
 import pacman.game.Game;
@@ -64,8 +64,8 @@ public class Executor
 		//run the game in asynchronous mode.
 		boolean visual=true;
 //		exec.runGameTimed(new NearestPillPacMan(),new FairGhosts(),visual);
-		exec.runGameTimed(new MyPacMan(),new FairGhosts(),visual);
-//		exec.runGameTimed(new HumanController(new KeyBoardInput()),new FairGhosts(),visual);	
+//		exec.runGameTimed(new StarterPacMan(),new FairGhosts(),visual);
+		exec.runGameTimed(new HumanController(new KeyBoardInput()),new FairGhosts(),visual);
 		//*/
 		
 		/*

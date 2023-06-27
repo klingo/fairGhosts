@@ -3,7 +3,6 @@ package pacman.optimizer.experiment;
 import pacman.Executor_Experiment;
 import pacman.controllers.Controller;
 import pacman.entries.ghosts.fair.FairGhosts;
-import pacman.entries.wcci2012.pacman.r05_ghostbuster.MyPacMan;
 import pacman.game.Constants;
 import pacman.game.Game;
 import pacman.optimizer.ga.FairGhostsFitnessFunction;

@@ -47,21 +47,21 @@ public class Executor_ExperimentV2 {
         // r01_eiisolver
 //        pacmanClasses.add(pacman.entries.wcci2012.pacman.r01_eiisolver.MyPacMan.class);
         // r04_Memetix
-        pacmanClasses.add(pacman.entries.wcci2012.pacman.r04_Memetix.MyPacMan.class);
+//        pacmanClasses.add(pacman.entries.wcci2012.pacman.r04_Memetix.MyPacMan.class);
         // r05_ghostbuster
-        pacmanClasses.add(pacman.entries.wcci2012.pacman.r05_ghostbuster.MyPacMan.class);
+//        pacmanClasses.add(pacman.entries.wcci2012.pacman.r05_ghostbuster.MyPacMan.class);
         // r08_arthurspooner
-        pacmanClasses.add(pacman.entries.wcci2012.pacman.r08_arthurspooner.MyPacMan.class);
+//        pacmanClasses.add(pacman.entries.wcci2012.pacman.r08_arthurspooner.MyPacMan.class);
         // r09_egreavette
-        pacmanClasses.add(pacman.entries.wcci2012.pacman.r09_egreavette.MyPacMan.class);
+//        pacmanClasses.add(pacman.entries.wcci2012.pacman.r09_egreavette.MyPacMan.class);
         // r10_rcpinto
-        pacmanClasses.add(pacman.entries.wcci2012.pacman.r10_rcpinto.MyPacMan.class);
+//        pacmanClasses.add(pacman.entries.wcci2012.pacman.r10_rcpinto.MyPacMan.class);
         // r15_stefan
-        pacmanClasses.add(pacman.entries.wcci2012.pacman.r15_stefan.MyPacMan.class);
+//        pacmanClasses.add(pacman.entries.wcci2012.pacman.r15_stefan.MyPacMan.class);
         // r16_MinimaxRampage
-        pacmanClasses.add(pacman.entries.wcci2012.pacman.r16_MinimaxRampage.MyPacMan.class);
+//        pacmanClasses.add(pacman.entries.wcci2012.pacman.r16_MinimaxRampage.MyPacMan.class);
         // r22_Kazzim
-        pacmanClasses.add(pacman.entries.wcci2012.pacman.r22_Kazzim.MyPacMan.class);
+//        pacmanClasses.add(pacman.entries.wcci2012.pacman.r22_Kazzim.MyPacMan.class);
         // r34_STARTER_PACMAN
         pacmanClasses.add(pacman.controllers.examples.StarterPacMan.class);
 
