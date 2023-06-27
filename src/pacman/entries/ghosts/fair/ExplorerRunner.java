@@ -57,7 +57,7 @@ public class ExplorerRunner {
 			doExplorerPheromoneUpdate(explorerAnts, bestAntOfIteration);
 		}
 		
-//		VisualUtil.drawPheromones(game, maze, PheromoneType.EXPLORER);	
+		VisualUtil.drawPheromones(game, maze, PheromoneType.EXPLORER);
 		
 		return maze;
 	}

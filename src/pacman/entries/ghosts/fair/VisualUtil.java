@@ -20,7 +20,7 @@ import pacman.game.GameViewExt;
 public class VisualUtil {
 		
 	public static void drawAnt(Game game, Ant ant) {
-		if(Parameters.EXPERIMENTAL_MODE){
+		if(!Parameters.EXPERIMENTAL_MODE){
 			return;
 		}
 		
@@ -37,17 +37,17 @@ public class VisualUtil {
 				color = Color.CYAN;
 			}  else if (ant.getPheromoneType().equals(PheromoneType.SUE)) {
 				color = Color.ORANGE;
-			} 
+			}
 			
 		} else {
 			color = Color.YELLOW;
 		}
-		
+
 		GameViewExt.addPoints(game, 50, color, ant.getVisitedNodeIndices());
 	}
 
 	public static void drawPheromones(Game game, AntMaze maze, PheromoneType pht) {
-		if(Parameters.EXPERIMENTAL_MODE){
+		if(!Parameters.EXPERIMENTAL_MODE){
 			return;
 		}
 		Color color = Color.WHITE;
