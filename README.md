@@ -1,44 +1,43 @@
 # fairGhosts - Ant colony controlled ghosts for Ms. Pac-Man
 This repository contains the source code for the 2016 IEEE publication 'fairGhosts — Ant colony controlled ghosts for Ms. Pac-Man' (https://ieeexplore.ieee.org/document/7744325).
 
-The actual controller can be found in ``src/pacman/entries/ghosts/fair/``.
+The primary controller is located in ``src/pacman/entries/ghosts/fair/``.
 
-The optimization of the variable parameters was done with a genetic algorithm found in ``src/pacman/optimizer/ga/``
+Parameter optimization was performed using a genetic algorithm, found in ``src/pacman/optimizer/ga/``
 
-There is also an experiment in ``src/pacman/optimizer/experiment/`` that can run multiple instances (based on number of available threads) of the competitions any number of times. It collects all individual scores, adds them up and calculates the average. This was used to evaluate the effectiveness of the different entries.
+An experiment in ``src/pacman/optimizer/experiment/`` can run multiple instances of the competition (based on the number of available threads) any number of times. It collects individual scores, aggregates them, and calculates the average to evaluate the effectiveness of different entries.
 
-## How to run
+## How to Run
 
-Please note that all variations of running (the game, the experiment, or the genetic algorithm) always rely on the same settings. Meaning, you need to make sure that for the experiment and the genetic algorithm the "visuals" are disabled for optimal performance.
+All execution modes (game, experiment, or genetic algorithm) rely on the same settings. For optimal performance, ensure visuals are disabled when running the experiment or genetic algorithm.
 
-### How to run the game
-The cam can be started by running the ``main method`` in ``src/pacman/Executor.java``.
+### Running the Game
+The game can be started by executing the ``main`` method in ``src/pacman/Executor.java``.
 
-Different controllers and modes can be configured there as well. The default are:
+Controllers and modes can be configured within this file. The default settings are:
 - **Ghosts:** fairGhosts
 - **Ms Pac-Man:** Human interaction (keyboard input)
-- Pheromone traces of the ants are visually shown (to disable, open ``Parameters.java`` and change ``EXPERIMENTAL_MODE`` to ``false``)
+- Any pheromone traces are displayed visually. To disable, open ``Parameters.java`` and set ``EXPERIMENTAL_MODE`` to ``false``.
 
-### How to run the experiment
-The built-in experiment can be started by running the ``main method`` in ``src/pacman/Executor_Experiment.java``.
+### Running the Experiment
+The experiment can be initiated by running the ``main`` method in ``src/pacman/Executor_Experiment.java``.
 
-An improved, multi-threaded version can be found in ``src/pacman/optimizer/experiment/Executor_ExperimentV2.java``.
+A multi-threaded, improved version is available in ``src/pacman/optimizer/experiment/Executor_ExperimentV2.java``.
 
-### How to run the genetic algorithm
-The genetic algorithm can be started by running the ``main method`` in ``src/pacman/optimizer/ga/FairGhostsMain.java``.
-You might want to disable the visualisation first though, to speed up the algorithm.
+### Running the Genetic Algorithm
+The genetic algorithm can be started by executing the ``main`` method in ``src/pacman/optimizer/ga/FairGhostsMain.java``. For faster execution, disable visualisation first.
 
-For every evolution, it prints out the best solution (chromosomes) in the ``fairGhostsJGAP.properties`` file. These can be set in the ``Parameters.java`` file to optimize the ant behavior of fairGhosts.
+For each evolution, the algorithm outputs out the best solution (chromosomes) to the ``fairGhostsJGAP.properties`` file. These can be set in ``Parameters.java`` to optimize the ant behavior of fairGhosts.
 
 
 ## Background
 
 ### Ant Colony Optimization
-Ant colony optimization is a metaheuristic algorithm inspired by the foraging behavior of ants. It uses a probabilistic approach to solve optimization problems, particularly in finding the shortest paths. The algorithm relies on pheromone trails and local heuristics to guide the search process, allowing for efficient exploration and exploitation of the solution space.
+Ant colony optimization is a metaheuristic algorithm inspired by the foraging behavior of ants. It employs a probabilistic approach to solve optimization problems, particularly for finding the shortest paths. The algorithm uses pheromone trails and local heuristics to guide the search process, enabling efficient exploration and exploitation of the solution space.
 
-See also: [Ant colony optimization](https://ieeexplore.ieee.org/document/4129846) (2016) by Marco Dorigo, Mauro Birattari, and Thomas Stutzle.
+See also: [Ant colony optimization](https://ieeexplore.ieee.org/document/4129846) (2016) by Marco Dorigo, Mauro Birattari, and Thomas Stützle.
 
 ### Ms. Pac-Man vs Ghosts League
-This league allowed parties to develop AI controllers for the classical arcade game Ms Pac-Man. You could submit Java code for either Ms Pac-Man or for the ghosts! The competition was brought to you by Philipp Rohlfshagen, David Robles and Simon Lucas from the University of Essex.
+This league allowed participants to develop AI controllers for the classic arcade game Ms. Pac-Man. Competitors could submit Java code for either Ms. Pac-Man or the ghosts. The competition was organized by Philipp Rohlfshagen, David Robles, and Simon Lucas from the University of Essex.
 
-See also: [Ms Pac-Man vs Ghosts League](https://web.archive.org/web/20150405034716/https://www.pacman-vs-ghosts.net/) (Web Archive from  05 April 2015, last snaphsot before the domain was sold).
+See also: [Ms Pac-Man vs Ghosts League](https://web.archive.org/web/20150405034716/https://www.pacman-vs-ghosts.net/) (Web Archive from  05 April 2015, the last capture before the domain was sold).
